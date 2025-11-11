@@ -1,0 +1,36 @@
+@use 'variables';
+
+
+.card {
+  background: variables.$skrift-hvid;
+  border-radius: variables.$border-radius;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  padding: 1rem;
+  border: 1px solid variables.$lysegraa;
+}
+
+.box--brunbox {
+  background: variables.$brunbox;
+  color: variables.$skrift-hvid;
+  border-radius: variables.$border-radius;
+  padding: 1rem;
+}
+
+
+.box--kantina {
+  background: transparent;
+  border: 2px solid variables.$brun-kantina;
+  border-radius: variables.$border-radius;
+  padding: 1rem;
+}
+
+.rounded {
+  border-radius: variables.$border-radius;
+
+}
+
+.divider {
+  height: 1px;
+  background: variables.$lysegraa;
+  margin: 1rem 0;
+}
