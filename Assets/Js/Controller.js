@@ -1,0 +1,1 @@
+//forbindelsen og opdatere mellem model og view.
