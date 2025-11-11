@@ -1,0 +1,36 @@
+@import 'variables';
+
+
+.card {
+  background: $skrift-hvid;
+  border-radius: $border-radius;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  padding: 1rem;
+  border: 1px solid $lysegraa;
+}
+
+.box--brunbox {
+  background: $brunbox;
+  color: $skrift-hvid;
+  border-radius: $border-radius;
+  padding: 1rem;
+}
+
+
+.box--kantina {
+  background: transparent;
+  border: 2px solid $brun-kantina;
+  border-radius: $border-radius;
+  padding: 1rem;
+}
+
+.rounded {
+  border-radius: $border-radius;
+
+}
+
+.divider {
+  height: 1px;
+  background: $lysegraa;
+  margin: 1rem 0;
+}
