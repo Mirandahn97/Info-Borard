@@ -1,13 +1,13 @@
 
-@import 'variables';
+@use 'variables';
 
 .btn {
   display: inline-block;
   padding: 0.6rem 1rem;
-  border-radius: $border-radius;
+  border-radius: variables.$border-radius;
   text-decoration: none;
   font-weight: 600;
-  color: $btn-contrast-text;
+  color: variables.$btn-contrast-text;
   border: 0;
   cursor: pointer;
   transition: transform 120ms ease, box-shadow 120ms ease, opacity 120ms ease;
@@ -15,25 +15,25 @@
 
 .btn:active { transform: translateY(1px); }
 .btn--orange {
-  background: $orange-knap;
-  color: $btn-contrast-text;
+  background: variables.$orange-knap;
+  color: variables.$btn-contrast-text;
 }
 
 .btn--blue {
-  background: $bla-ii;
-  color: $btn-contrast-text;
+  background: variables.$blaa-ii;
+  color: variables.$btn-contrast-text;
 }
 
 
 .btn--red {
-  background: $rod-ii;
-  color: $btn-contrast-text;
+  background: variables.$rod-ii;
+  color: variables.$btn-contrast-text;
 }
 
 .btn--outline {
   background: transparent;
-  color: $moerkegraa;
-  border: 2px solid $brun-kantina;
+  color: variables.$moerkegraa;
+  border: 2px solid variables.$brun-kantina;
 }
 .btn[disabled], .btn--disabled {
   opacity: 0.5;

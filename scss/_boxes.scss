@@ -1,36 +1,36 @@
-@import 'variables';
+@use 'variables';
 
 
 .card {
-  background: $skrift-hvid;
-  border-radius: $border-radius;
+  background: variables.$skrift-hvid;
+  border-radius: variables.$border-radius;
   box-shadow: 0 2px 6px rgba(0,0,0,0.06);
   padding: 1rem;
-  border: 1px solid $lysegraa;
+  border: 1px solid variables.$lysegraa;
 }
 
 .box--brunbox {
-  background: $brunbox;
-  color: $skrift-hvid;
-  border-radius: $border-radius;
+  background: variables.$brunbox;
+  color: variables.$skrift-hvid;
+  border-radius: variables.$border-radius;
   padding: 1rem;
 }
 
 
 .box--kantina {
   background: transparent;
-  border: 2px solid $brun-kantina;
-  border-radius: $border-radius;
+  border: 2px solid variables.$brun-kantina;
+  border-radius: variables.$border-radius;
   padding: 1rem;
 }
 
 .rounded {
-  border-radius: $border-radius;
+  border-radius: variables.$border-radius;
 
 }
 
 .divider {
   height: 1px;
-  background: $lysegraa;
+  background: variables.$lysegraa;
   margin: 1rem 0;
 }
