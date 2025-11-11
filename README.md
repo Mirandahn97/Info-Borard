@@ -1,4 +1,4 @@
-# Info-Borard
+# Info-Board
 Info bord
 Names:
 Miranda H. Nielsen
