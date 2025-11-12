@@ -1,1 +1,0 @@
-//det brugeren ser.
