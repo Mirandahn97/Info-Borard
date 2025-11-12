@@ -18,7 +18,8 @@
 
 
 .box--kantina {
-  background: transparent;
+  background: variables.$brunbox;
+  color: variables.$skrift-hvid;
   border: 2px solid variables.$brun-kantina;
   border-radius: variables.$border-radius;
   padding: 1rem;
