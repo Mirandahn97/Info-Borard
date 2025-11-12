@@ -1,3 +1,3 @@
-import hentNyheder from "./Modules/opslagstavle/opslagstavle.js"
+import hentData from "./Modules/opslagstavle/opslagstavle.js"
 
-hentNyheder()
+hentData()
