@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vejr-og-dato API</title>
+</head>
+
+<body>
+    <main style="font-family:system-ui,Segoe UI,Roboto,Arial;margin:24px;max-width:780px;">
+    <h1>Vejr og dato (lokal fil)</h1>
+
+
+    <p>Viser vejroplysninger hentet fra den lokale fil <code>vejr-api.json</code>.</p>
+
+        <section id="weather">
+            <h2 id="location">—</h2>
+            <p style="color:#444;margin-top:6px">Her vises de seneste vejroplysninger for stedet. Hvis du vil se andre data, kan du opdatere <code>vejr-api.json</code>.</p>
+            <div style="display:flex;align-items:center;gap:12px">
+
+                <img id="icon" alt="" style="width:84px;height:84px;display:none">
+                <div>
+
+                    <div><strong>Temperatur:</strong> <span id="temp">—</span></div>
+                    <div><strong>Føles som:</strong> <span id="feels">—</span></div>
+
+                    <div><strong>Vejr:</strong> <span id="desc">—</span></div>
+                    <div><strong>Vind:</strong> <span id="wind">—</span></div>
+                    <div><strong>Fugtighed / Tryk:</strong> <span id="hum_pres">—</span></div>
+                </div>
+
+            </div>
+            <div style="margin-top:12px"><strong>Lokal tid (anslået):</strong> <span id="localtime">—</span></div>
+            <div><strong>Tid i UTC (datapunkt):</strong> <span id="utctime">—</span></div>
+
+            <div style="margin-top:10px;color:#666"><small>Bemærk: tidspunktet er beregnet ud fra API'ets timestamp og tidszoneoffset, så det er kun et cirka-tidspunkt.</small></div>
+        </section>
+
+        <hr>
+
+        <section>
+            <h3>Rå JSON (rådata fra API)</h3>
+            <pre id="raw" style="background:#f7f7f7;padding:12px;border-radius:6px;overflow:auto;max-height:360px">Henter data…</pre>
+        </section>
+    </main>
+
+    <script>
+    async function loadLocalWeather(){
+
+            try {
+            const res = await fetch('vejr-api.json');
+            if (!res.ok) throw new Error('Kunne ikke hente vejr-api.json — status: ' + res.status);
+            const data = await res.json();
+
+            document.getElementById('location').textContent = `${data.name || '-'}, ${data.sys?.country || ''}`;
+            document.getElementById('temp').textContent = (data.main?.temp != null) ? `${Number(data.main.temp).toFixed(1)} °C` : '—';
+            document.getElementById('feels').textContent = (data.main?.feels_like != null) ? `${Number(data.main.feels_like).toFixed(1)} °C` : '—';
+
+            document.getElementById('desc').textContent = data.weather?.[0]?.description || '—';
+            document.getElementById('wind').textContent = data.wind ? `${data.wind.speed} m/s, ${data.wind.deg}°` : '—';
+            document.getElementById('hum_pres').textContent = (data.main) ? `${data.main.humidity}% / ${data.main.pressure} hPa` : '—';
+
+
+
+    
+            const iconCode = data.weather?.[0]?.icon;
+            if (iconCode) {
+                const img = document.getElementById('icon');
+                img.src = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
+
+                img.style.display = '';
+                img.alt = data.weather?.[0]?.main || 'weather icon';
+                
+            }
+
+
+            const dt = Number(data.dt) || null;
+            const tz = Number(data.timezone) || 0;
+            if (dt) {
+
+                const utc = new Date(dt * 1000);
+                document.getElementById('utctime').textContent = utc.toUTCString();
+
+
+                const localApprox = new Date((dt + tz) * 1000);
+                document.getElementById('localtime').textContent = localApprox.toUTCString() + ' (approx)';
+            }
+            document.getElementById('raw').textContent = JSON.stringify(data, null, 2);
+        } catch (err) {
+
+            document.getElementById('raw').textContent = 'Fejl: ' + err.message;
+            console.error(err);
+
+
+            if (err.message.includes('fetch'))
+            console.log('Kunne ikke hente eller vise vejrdata fra vejr-api.json');
+            
+            if (err.message.includes('JSON'))
+            console.log('Der var et problem med at læse JSON-dataene fra vejr-api.json');
+
+            
+        }
+
+    }
+
+    window.addEventListener('load', () => loadLocalWeather());
+    </script>
+</body>
+</html>
+
