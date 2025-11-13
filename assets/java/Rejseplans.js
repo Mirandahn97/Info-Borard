@@ -10,7 +10,7 @@ const sampleData = {
       "ProductAtStop": { "name": "Bybus 18", "displayNumber": "18", "operatorInfo": { "name": "NT" }, "matchId": "10228" },
       "Product": [{ "name": "Bybus 18", "displayNumber": "18", "matchId": "10228" }],
       "Notes": { "Note": [{ "value": "1", "key": "TW", "type": "I", "txtN": "1" }] },
-      
+
       "name": "Bybus 18",
       "type": "ST",
       "stop": "Øster Uttrp vej",
@@ -341,5 +341,7 @@ export default {
   sampleData,
 
 };
+
+
 
 
