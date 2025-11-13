@@ -1,3 +1,6 @@
+import getSkema from './Modules/Skema/Skema.js'
+
+getSkema()
 import startKantine from './modules/kantine/kantineController.js'
 
 startKantine ()
