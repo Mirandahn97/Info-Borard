@@ -20,15 +20,23 @@ return fetch('https://infoskaerm.techcollege.dk/umbraco/api/content/getcanteenme
 function tegnMenu(data){
     let menuElement = document.getElementById('kantinen')
     menuElement.classList.add('box--kantina')
+
+    //her visest der billedet
     let imageElement = document.createElement('img')
     imageElement.src='Assets/img/c5be8b5f-b962-4d4a-aea8-70cd2ab04b88.jpg'
     menuElement.appendChild(imageElement)
+
+    // her visest der text under billedet
     let textElement = document.createElement('div')
     textElement.innerText = 'I DAG TILBYDER KANTINEN'
     menuElement.append(textElement)
+
+    //her vises der uge nummer
     let headLine = document.createElement('h2')
     headLine.innerText = `uge: ${data.Week}`
     menuElement.appendChild(headLine)
+
+    // her visest der ugedag og menu
     const date = new Date()
     const curDay = data.Days[date.getDay()-1];
      let myDay = `<article><h3> ${curDay.DayName}:</h3> ${curDay.Dish}</article>`
