@@ -18,16 +18,19 @@ return fetch('https://infoskaerm.techcollege.dk/umbraco/api/content/getcanteenme
 //viewcode
 // Her viser vi "uge: tal"
 function tegnMenu(data){
-    console.log(data);
     let menuElement = document.getElementById('kantinen')
     menuElement.classList.add('box--kantina')
+    let imageElement = document.createElement('img')
+    imageElement.src='Assets/img/c5be8b5f-b962-4d4a-aea8-70cd2ab04b88.jpg'
+    menuElement.appendChild(imageElement)
+    let textElement = document.createElement('div')
+    textElement.innerText = 'I DAG TILBYDER KANTINEN'
+    menuElement.append(textElement)
     let headLine = document.createElement('h2')
     headLine.innerText = `uge: ${data.Week}`
     menuElement.appendChild(headLine)
-
-
-    data.Days.forEach(Dag => {
-        let myDay = `<article><h3> ${Dag.DayName}:</h3> ${Dag.Dish}</article>`
-        menuElement.innerHTML += myDay 
-    });
+    const date = new Date()
+    const curDay = data.Days[date.getDay()-1];
+     let myDay = `<article><h3> ${curDay.DayName}:</h3> ${curDay.Dish}</article>`
+     menuElement.innerHTML += myDay 
 }

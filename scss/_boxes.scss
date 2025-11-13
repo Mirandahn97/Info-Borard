@@ -23,6 +23,14 @@
   border: 2px solid variables.$brun-kantina;
   border-radius: variables.$border-radius;
   padding: 1rem;
+  img{
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    text-align: center;
+  }
+    
+    
 }
 
 .rounded {
