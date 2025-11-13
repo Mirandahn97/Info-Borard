@@ -3,23 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="module" src="Assets/script.js"></script>
+
+    <script type="module">
+        import { init } from './assets/java/Rejseplans.js';
+        document.addEventListener('DOMContentLoaded', () => init('busplan'));
+    </script>
     <link rel="stylesheet" href="">
-    <title>(Sanne)Opslagstavle WEB</title>
+    <title>(Sanne)Rejseplans WEB</title>
 </head>
-<body>
+    <body>
+    
     <main>
         <section id="skema"></section>
         <section id="midten">
-            <section id="ur"></section>
-            <section id="opslagstavle"></section>
-            <section id="kantinen"></section>
+        <section id="ur"></section>
+
+        <section id="opslagstavle"></section>
+        <section id="kantinen"></section>
         </section>
+        
+
         <section id="højre">
             <section id="busplan"></section>
             <section id="vjer"></section>
+
         </section>
 
     </main>
 </body>
+
 </html>
+
