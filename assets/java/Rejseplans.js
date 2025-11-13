@@ -51,6 +51,7 @@ const sampleData = {
       "direction": "Aalborg St.",
       "directionFlag": "1"
 
+      // the ID listing sub-caption, is the "matchId" beside the operator name NT
     }
   ],
   "TechnicalMessages": {
