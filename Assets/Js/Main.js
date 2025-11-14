@@ -1,3 +1,6 @@
+import updateClock from './Modules/Ur/ur.js'
+
+updateClock()
 import hentData from "./Modules/opslagstavle/opslagstavle.js"
 
 hentData()
