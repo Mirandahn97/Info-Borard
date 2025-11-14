@@ -56,6 +56,10 @@
 }
 
 .box--kantina {
+  background: transparent;
+  border: 2px solid #564A1F;
+  border-radius: 16px;
+  padding: 1rem;
   background: rgba(0, 0, 0, 0.5);
   color: #FFFFFF;
   border: 2px solid #564A1F;
@@ -89,4 +93,11 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 1rem;
+}
+
+#news {
+  width: 400px;
+  height: 60px;
+  top: 416px;
+  left: 1356.97px;
 }/*# sourceMappingURL=main.css.map */
