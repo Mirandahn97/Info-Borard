@@ -1,6 +1,6 @@
 
 
-const JSON_PATH = 'Assets/Js/Modals/vejr-og-dataAPI.json';
+const JSON_PATH = 'assets/javascript/modals/vejr-og-dataAPI.json';
 async function loadWeather() {
 
 	try {
