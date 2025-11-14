@@ -1,2 +1,0 @@
-
-{"coord": { "lon": 9.9187, "lat": 57.048 }, "weather": [ { "id": 804, "main": "Clouds", "description": "overcast clouds", "icon": "04d" } ], "base": "stations", "main": { "temp": 8.96, "feels_like": 6.67, "temp_min": 8.87, "temp_max": 8.96, "pressure": 1008, "humidity": 87, "sea_level": 1008, "grnd_level": 1005 }, "visibility": 10000, "wind": { "speed": 4.12, "deg": 150 }, "clouds": { "all": 100 }, "dt": 1762876800, "sys": { "type": 1, "id": 1600, "country": "DK", "sunrise": 1762843996, "sunset": 1762874135 }, "timezone": 3600, "id": 2624886, "name": "Aalborg", "cod": 200 }
