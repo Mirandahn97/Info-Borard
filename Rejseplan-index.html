@@ -8,12 +8,12 @@
         import { init } from './assets/java/Rejseplans.js';
         document.addEventListener('DOMContentLoaded', () => init('busplan'));
     </script>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="assets/css/main.css">
     <title>(Sanne)Rejseplans WEB</title>
 </head>
     <body>
     
-    <main>
+    <main class="top-rect container">
         <section id="skema"></section>
         <section id="midten">
         <section id="ur"></section>
@@ -30,6 +30,11 @@
         </section>
 
     </main>
+    <div class="transport-bottom" aria-hidden="true">
+        <img src="assets/img/bus-simple.svg" alt="Bus" class="icon-bus">
+        <img src="assets/img/TRAIN.png" alt="Train" class="icon-train">
+    </div>
+
 </body>
 
 </html>

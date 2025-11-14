@@ -1,41 +1,46 @@
 
 
-@use 'variables';
-@use 'buttons';
-@use 'boxes';
-
-
-body {
-  background: variables.$gul;
-  color: variables.$sort;
-
+body
+{
+  background: #F5D45B;
+  color: #000000;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
 }
 
 
+
 .container {
-  max-width: variables.$max-content-width;
+  max-width: 1200px; 
   margin: 0 auto;
+
   padding: 1rem;
 
 }
 
+.top-rect {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  margin: 18px auto;
 
+  padding: 12px 16px;
+  max-width: 1200px;
+}
 .transport-bottom {
   position: fixed;
   left: 50%;
   bottom: 12px;
   transform: translateX(-50%);
   display: flex;
-
   gap: 8px;
+
   align-items: center;
   padding: 6px 10px;
   background: rgba(0,0,0,0.06);
   border-radius: 12px;
   z-index: 9999;
-}
 
+}
 
 .transport-bottom img,
 .transport-bottom svg {
@@ -46,14 +51,11 @@ body {
 .transport-bottom .icon-train {
   width: 36px;
   opacity: 0.95;
-
 }
+
 
 @media (max-width: 480px) {
   .transport-bottom img,
   .transport-bottom svg { width: 36px; }
+
 }
-
-
-
-
