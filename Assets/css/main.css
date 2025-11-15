@@ -56,21 +56,11 @@
 }
 
 .box--kantina {
-  background: transparent;
-  border: 2px solid #564A1F;
-  border-radius: 16px;
-  padding: 1rem;
   background: rgba(0, 0, 0, 0.5);
   color: #FFFFFF;
   border: 2px solid #564A1F;
   border-radius: 16px;
   padding: 1rem;
-  text-align: center;
-}
-.box--kantina img {
-  display: block;
-  margin: 0 auto;
-  max-width: 100%;
 }
 
 .rounded {
@@ -83,6 +73,51 @@
   margin: 1rem 0;
 }
 
+#ur-container {
+  width: 528px;
+  height: 236px;
+  top: 51px;
+  left: 1707px;
+  border: 1px;
+  border-radius: 16px;
+  border-color: #707070;
+}
+
+#ur {
+  text-align: center;
+  size: 800px;
+  color: #FFFFFF;
+  background-color: #707070;
+}
+
+box-one {
+  width: 251px;
+  height: 106px;
+  top: 60px;
+  left: 1717px;
+}
+
+box-two {
+  width: 251px;
+  height: 106px;
+  top: 60px;
+  left: 1717px;
+}
+
+box-three {
+  width: 251px;
+  height: 106px;
+  top: 60px;
+  left: 1975px;
+}
+
+box-four {
+  width: 251px;
+  height: 106px;
+  top: 60px;
+  left: 1975px;
+}
+
 body {
   background: #F5D45B;
   color: #000000;
@@ -93,11 +128,4 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 1rem;
-}
-
-#news {
-  width: 400px;
-  height: 60px;
-  top: 416px;
-  left: 1356.97px;
 }/*# sourceMappingURL=main.css.map */

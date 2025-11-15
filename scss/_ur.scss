@@ -1,3 +1,5 @@
+@use 'variables';
+@use 'boxes';
 
 #ur-container{
 width: 528px;
@@ -5,12 +7,15 @@ height: 236px;
 top: 51px;
 left: 1707px;
 border: 1px;
-border-color: $moerkegraa;
+border-radius: variables.$border-radius;
+border-color: variables.$moerkegraa;
 
 }
 #ur{
-    color: $skrift-hvid;
-    background-color: $moerkegraa ;
+    text-align: center;
+    size: 800px;
+    color: variables.$skrift-hvid;
+    background-color: variables.$moerkegraa ;
    
 }
 box-one{
@@ -32,10 +37,12 @@ box-three{
     height: 106px;
     top: 60px;
     left: 1975px;
+    
 }
 box-four{
     width: 251px;
     height: 106px;
     top: 60px;
     left: 1975px;
+    
 }
