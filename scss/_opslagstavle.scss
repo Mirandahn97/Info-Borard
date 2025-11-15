@@ -1,19 +1,24 @@
+@use 'variables';
+@use 'boxes';
 
-#container-opslagstavle{
-  width:1.274px;
+
+.container-opslagstavle{
+   width:1.274px;
   height:1.088px;
   top:325px;
   left:1348px;
-  background-color: $brunbox;
+  background-color:boxes.$brunbox;
+  border-radius: variables.$border-radius;
 
-}
 #news{
-  // font-family: ;
-    font-weight: 600;
-    font-size: 50px;
-    width: 400px;
-    height:60px;
+    font-family: sans-serif;
+    font-weight:50px;
+    font-size: 5px;
+    width: 200px;
+    height:30px;
     top:416px;
     left:1356.97px;
+    line-height: 1.2;
     color:$skrift-hvid;
+}
 }
