@@ -1,48 +1,26 @@
 @use 'variables';
-@use 'boxes';
 
-#ur-container{
+
+.ur-container {
+background-color:variables.$moerkegraa;
+border-radius: variables.$border-radius;
+box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+padding: 1rem;
+border: 8px solid variables.$lysegraa;
 width: 528px;
 height: 236px;
 top: 51px;
 left: 1707px;
-border: 1px;
-border-radius: variables.$border-radius;
-border-color: variables.$moerkegraa;
 
-}
-#ur{
+#ur {
+    font-family: sans-serif;
     text-align: center;
-    size: 800px;
+    font-size: 150px;
     color: variables.$skrift-hvid;
-    background-color: variables.$moerkegraa ;
-   
-}
-box-one{
-    width: 251px;
-    height: 106px;
-    top: 60px;
-    left: 1717px;
-}
+    width: 550px;
+    height:370px;
+    margin: auto;
+    padding:20px;
 
-box-two{
-    width: 251px;
-    height: 106px;
-    top: 60px;
-    left: 1717px;
 }
-
-box-three{
-    width: 251px;
-    height: 106px;
-    top: 60px;
-    left: 1975px;
-    
-}
-box-four{
-    width: 251px;
-    height: 106px;
-    top: 60px;
-    left: 1975px;
-    
 }
