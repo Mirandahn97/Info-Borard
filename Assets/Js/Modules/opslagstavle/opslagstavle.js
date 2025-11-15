@@ -8,18 +8,17 @@ export default async function hentData() {
         const data = await response.json(); // vent på at data bliver klar
             console.log(data.items)
             displayNews(data.items)
-       
- 
+        
       } 
       catch (error) {
-        document.getElementById("opslagstavle").innerHTML = "Der skete en fejl 😢";
+        document.getElementById("opslagstavle-container").innerHTML = "Der skete en fejl 😢";
         console.error(error);
       }
     }
     function displayNews(data){ 
-        let container = document.getElementById("opslagstavle")
+        let container = document.getElementById("news")
         data.forEach(newNews => {
-        container.innerHTML+= `<h2>${newNews.title}</h2>`
+        container.innerHTML+= `<h6>${newNews.title}</h6>`
         });
     }
 
