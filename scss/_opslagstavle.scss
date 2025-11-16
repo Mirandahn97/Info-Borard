@@ -21,4 +21,10 @@
     line-height: 1.2;
     color:$skrift-hvid;
 }
+.box--brunbox {
+  background: variables.$brunbox;
+  color: variables.$skrift-hvid;
+  border-radius: variables.$border-radius;
+  padding: 1rem;
+}
 }
