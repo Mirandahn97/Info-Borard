@@ -1,4 +1,6 @@
-
+ import { init } from './assets/java/Rejseplans.js';
+        document.addEventListener('DOMContentLoaded', () => init('busplan'));
+   
 
 // Rejseplans.js
 const sampleData = {

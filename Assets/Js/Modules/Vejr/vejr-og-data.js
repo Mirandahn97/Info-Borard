@@ -11,7 +11,7 @@ async function loadWeather() {
 
 	} catch (err) {
 		console.error(err);
-		const c = document.getElementById('vjer');
+		const c = document.getElementById('vejr');
 		if (c) c.textContent = 'Kunne ikke indlæse vejret.';
 
 	}
@@ -78,5 +78,7 @@ if (document.readyState === 'loading') {
 
 
 }
+
+   
 
 
