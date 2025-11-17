@@ -1,5 +1,6 @@
 import updateClock from './Modules/Ur/ur.js'
-import Assets/Js/Modules/Vejr/vejr-og-data.js
+
+import 'Assets/Js/Modules/Vejr/vejr-og-data.js'
 updateClock()
 import hentData from "./Modules/opslagstavle/opslagstavle.js"
 
