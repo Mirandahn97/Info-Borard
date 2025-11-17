@@ -1,1 +1,0 @@
-Jeg er her bare fordi jeg skal 

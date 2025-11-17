@@ -1,8 +1,9 @@
 // Her styler vi midten 
 @use 'kantine';
 @use 'opslagstavle';
+@use 'variables';
 
 .midten{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
