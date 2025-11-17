@@ -1,0 +1,25 @@
+@use 'variables';
+
+
+
+#skema{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    div {
+    display: flex;
+    justify-content: space-between;
+    border-radius: variables.$border-radius;
+    padding: 1rem;
+    background-color: white;
+    text-transform: uppercase;
+    
+}
+} 
+
+.gt {
+       background-color: variables.$blaa-ii;
+       height: 100%;
+       width: 100%;
+    } 

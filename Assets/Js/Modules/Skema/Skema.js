@@ -20,6 +20,7 @@ function createSkema(data) {
 
     //Finder sectionen med id "skema" i HTML
     const container = document.getElementById("skema")
+    container.classList.add('skema')
 
     const h1 = document.createElement("h1")
     h1.innerText = "SKEMA"
@@ -37,33 +38,58 @@ function createSkema(data) {
         "Grafisk teknik."
     ]
 
-
+    let skemaIndex = 0
     data.forEach(skema => {
+        if(skemaIndex < 8) {
 
         if (arrAllowed.includes(skema.Education)) {
+
+            //Content div
+            const contentDiv = document.createElement("div")
+
 
             //Lokaler
             const room = document.createElement("article")
             room.innerText = skema.Room
-            container.appendChild(room)
+            switch (skema.Education) {
+                case 'Grafisk teknik.':
+                     room.classList.add('gt');
+                     break;
+                case "Webudvikler":
+                     room.classList.add('wu');
+                     break;
+                case "Mediegrafiker":
+                     room.classList.add('mg');
+                     break;
+                default: 
+                room.classList.add('unknownSubject');
+                break;
+            }
+            
 
             //Hold
             const team = document.createElement("article")
             team.innerText = skema.Team
-            container.appendChild(team)
+            
 
             //Fag
             const subject = document.createElement("article")
             subject.innerText = skema.Subject
-            container.appendChild(subject)
+            
 
             //Tid
             const time = document.createElement("article")
             time.innerText = getLocalTime(skema.StartDate)
-            container.appendChild(time)
+            
 
+            contentDiv.appendChild(room)
+            contentDiv.appendChild(team)
+            contentDiv.appendChild(subject)
+            contentDiv.appendChild(time)
+            container.appendChild(contentDiv)
+            skemaIndex++
         }
+    }
     });
-
 }
 
