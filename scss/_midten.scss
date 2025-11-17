@@ -1,0 +1,8 @@
+// Her styler vi midten 
+@use 'kantine';
+@use 'opslagstavle';
+
+.midten{
+    display: flex;
+    flex-direction: column;
+}
